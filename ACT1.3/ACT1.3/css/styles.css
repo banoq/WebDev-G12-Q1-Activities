@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../Pictures/mono.ttf') format('truetype');
+    /* applies local custom font */
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    /* custom font */
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-image: url('../Pictures/v657-adj-51-abstractelements.jpg');
+    /* applies image background */
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+header {
+    background-color: #72BCD4;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    /* Style for headings, including border color and text color */
+    .headicenter {
+        border: solid black 2px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+        height: 100vh;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#headernav0 {
+    background-color: rgb(240, 228, 228);
+    border: 3px solid black;
+}
+
+nav ul {
+    /*  Styles for navigation menu */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+/* Styles for headings
+ and paragraphs */
+
+h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.info1 {
+    border: 2px solid black;
+}
+
+p {
+    margin: 20px 0;
+    color: #000000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+
+/* New CSS for image placement ( image + cat typing gif in a border) */
+
+.image-container {
+    text-align: center;
+}
+
+.container2 {
+    border: 2px solid black;
+    float: right;
+    margin: 20px;
+}
+
+footer {
+    background-color: rgb(240, 228, 228);
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* This part of code defines a hover effect for an element with class "animatedheader0" */
+
+
+/* Define the initial state of the ::before pseudo-element */
+
+.animatedheader0::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.animatedheader0:hover::before {
+    transform: scaleX(1);
+    /* Scale the element horizontally to 1 (full width) on hover */
+    transform-origin: bottom left;
+    /* Set the transformation origin to the bottom left corner on hover */
+}
+
+
+/* Style for the ::before pseudo-element */
+
+.animatedheader0::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    /* Position absolutely within the parent element */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: #ade6d8;
+    /* Set the background color using Hex code */
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+.animatedheader0 {
+    /* Style for the parent element with class "animatedheader0" */
+    position: relative;
+    /* Set the position to relative for proper stacking context */
+    font-size: 32px;
+}
